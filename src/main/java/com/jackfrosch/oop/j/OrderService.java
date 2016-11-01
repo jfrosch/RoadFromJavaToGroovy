@@ -5,7 +5,7 @@ import java.util.List;
 
 public class OrderService {
 
-    BigDecimal[] calculateOrderTotal(Order order) {
+    public BigDecimal[] calculateOrderTotal(Order order) {
         List<LineItem> items = order.getItems();
 
         BigDecimal subtotal = items.stream()
@@ -25,5 +25,4 @@ public class OrderService {
     private BigDecimal findTaxRate(String postalCode) {
         return new BigDecimal("0.05");
     }
-
 }
