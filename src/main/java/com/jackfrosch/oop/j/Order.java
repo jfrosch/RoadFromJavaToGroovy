@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
-    private String orderid;
+    private String orderId;
     private String postalCode;
     private List<LineItem> items;
 
-    public Order(String postalCode, String orderId) {
+    public Order(String orderId, String postalCode) {
+        this.orderId = orderId;
         this.postalCode = postalCode;
-        this.orderid = orderId;
         items = new ArrayList<>();
     }
 
@@ -21,20 +21,20 @@ public class Order {
 
         Order order = (Order) o;
 
-        return orderid.equals(order.orderid);
+        return orderId.equals(order.orderId);
     }
 
     @Override
     public int hashCode() {
-        return orderid.hashCode();
+        return orderId.hashCode();
     }
 
     public String getPostalCode() {
         return postalCode;
     }
 
-    public String getOrderid() {
-        return orderid;
+    public String getOrderId() {
+        return orderId;
     }
 
     public List<LineItem> getItems() {
