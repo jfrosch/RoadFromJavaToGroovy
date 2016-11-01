@@ -10,6 +10,10 @@ public class Order {
     String postalCode
     List<LineItem> items = []
 
+    Order addLineItem(LineItem item) {
+        this.leftShift(item)
+    }
+
     Order leftShift(LineItem item) {
         items.add(item)
         this
