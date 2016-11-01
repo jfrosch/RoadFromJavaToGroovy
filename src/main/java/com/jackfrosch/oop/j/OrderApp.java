@@ -14,7 +14,7 @@ public class OrderApp {
     }
 
     private Order createOrder() {
-        Order order = new Order("Test1", "99999-1234");
+        Order order = new Order("Test - J", "99999-1234");
         order.addLineItem(new LineItem("Prod_A", new BigDecimal("10.00"), 1, true));
         order.addLineItem(new LineItem("Prod_B", new BigDecimal("15.00"), 2, false));
         order.addLineItem(new LineItem("Prod_C", new BigDecimal("20.00"), 3, true));
@@ -31,7 +31,7 @@ public class OrderApp {
     private String buildReport(Order order, BigDecimal[] totals) {
         String decorator = "\n--------------------";
         return decorator +
-                "\nOrder id: " + order.getOrderid() +
+                "\nOrder id: " + order.getOrderId() +
                 decorator +
                 "\nSubtotal: " + totals[0] +
                 "\nTax: " + totals[1] +
