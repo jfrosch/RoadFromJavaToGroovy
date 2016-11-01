@@ -12,7 +12,7 @@ class OrderApp {
     }
 
     private Order createOrder() {
-        Order order = new Order("Test1", "99999-1234")
+        Order order = new Order("Test - G", "99999-1234")
         order << new LineItem("Prod_A", 10.00, 1, true)
         order << new LineItem("Prod_B", 15.00, 2, false)
         order << new LineItem("Prod_C", 20.00, 3, true)
