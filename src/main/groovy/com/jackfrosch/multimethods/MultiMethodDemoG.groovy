@@ -11,14 +11,14 @@ class MultiMethodDemoG {
     }
 
     private void report(String rpt) {
-        System.out.println(rpt)
+        println rpt
     }
 
     private String doSomething(String arg) {
-        return "doSomething(String)"
+        "doSomething(String)"
     }
 
     private String doSomething(Object arg) {
-        return "doSomething(Object)"
+        "doSomething(Object)"
     }
 }
