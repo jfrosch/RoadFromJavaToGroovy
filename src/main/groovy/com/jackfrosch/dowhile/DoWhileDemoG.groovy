@@ -3,24 +3,23 @@ package com.jackfrosch.dowhile
 import groovy.transform.CompileStatic
 
 @CompileStatic
-public class DoWhileDemoG {
+class DoWhileDemoG {
     private static final int NUM_PRIMES = 100000
 
     List<Integer> primes = []
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         new DoWhileDemoG().findPrimes(NUM_PRIMES)
     }
 
     private void findPrimes(int limit) {
         long start = System.currentTimeMillis()
-        primes.add(2)
-        primes.add(3)
+        primes << 2 << 3
 
         int candidate = 5
         while(primes.size() <= limit) {
             if(isPrime(candidate)) {
-                primes.add(candidate)
+                primes << candidate
             }
             candidate += 2
         }
