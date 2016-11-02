@@ -16,6 +16,13 @@ class StringRunner {
         println "s4.class: ${s4.class}"
         println "s5.class: ${s5.class}"
 
+        // char gotcha
+        // char c1 = 'ab'
+        // char c1 = (char) 'ab'
+        char c2 = 'ab' as char
+        println "c2.class: ${c2.class}; c2 = ${c2}"
+
+        // Map gotcha
         Map map = ["${name}" : 57]
         println map
         println map.Jack
