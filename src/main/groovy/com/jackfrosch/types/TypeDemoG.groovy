@@ -1,7 +1,7 @@
 package com.jackfrosch.types;
 
-public class TypeDemoG {
-    public static void main(String[] args) {
+class TypeDemoG {
+    static void main(String[] args) {
         new TypeDemoG().showTypes()
     }
 
