@@ -4,8 +4,10 @@ class EqualityChecker {
 
     static void main(args) {
         String z = 'Z'
+        String yzObj = 'YZ'
         showEqualityRelationships('YZ vs Y + Z', 'YZ', 'Y' + z)
         showEqualityRelationships('YZ vs Y${z}', 'YZ', "Y${z}")
+        showEqualityRelationships('YZ vs yzObj', 'YZ', yzObj)
         showEqualityRelationships('5 vs 5L', 5, 5L)
         showEqualityRelationships('Code(Hello) vs Code(hello)',
                                     new Code(value: 'Hello'),
