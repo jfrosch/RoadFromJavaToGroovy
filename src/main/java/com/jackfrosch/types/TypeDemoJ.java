@@ -6,16 +6,13 @@ public class TypeDemoJ {
     }
 
     private void showTypes() {
-        Object fiveOh = 5.0;
-
-        System.out.println("fiveOh instanceof Double : " + (fiveOh instanceof Double));
-
-        int value = 5;
-        method(value);
+        int five = 5;
+//        System.out.println("five instanceof Integer : " + (five instanceof Integer));
+        method(five);
     }
 
     private void method(long value) {
-        System.out.println(value + " is an long");
+        System.out.println(value + " is a long");
     }
 
     private void method(Integer value) {
